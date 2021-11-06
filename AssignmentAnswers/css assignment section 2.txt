@@ -1,0 +1,72 @@
+1 create new branch css-assignment
+$ git branch  css-assignments
+ 
+2 switch to css-assignment
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+3 copy all css assignments into css-assignment branch
+4 commit the css-assignment branch
+$ git commit -m "my first commit in css-assignmnet branch"
+[css-assignments 2b95587] my first commit in css-assignmnet branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 assignments/style.css
+
+5 make minor changes in the READme.txt file in css-assignment folder$ vi READme.txt
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ git add READme.txt
+
+
+6.commit changes
+$ git commit -m "this is my first commit in css-assignment branch"
+[css-assignments 97812ac] this is my first commit in css-assignment branch
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+7 switch to master branch
+$ git checkout master
+Switched to branch 'master'
+
+8 make minor change  in the README.txt file on line 3 and commit changes
+$ git commit -m "my first chnge in master branch on behalf of css-assignment branch"
+[master d910ea8] my first chnge in master branch on behalf of css-assignment branch
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+
+9 &10 Again switch to css-assignment folder$
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+10 make minor changes files belongs to css-assignment branch
+$ ls
+READme.txt  index.html  style.css
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ vi READme.txt
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ vi index.html
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ vi style.css
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ git add .
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (css-assignments)
+$ git commit -m "this is my second commit on css-assignment branch"
+[css-assignments 924db47] this is my second commit on css-assignment branch
+ 3 files changed, 6 insertions(+), 2 deletions(-)
+
+
+12 switch to master
+$ git checkout master
+Switched to branch 'master'
+
+13 merge css-assignment branch
+$ git commit -m "commiting master branch while merge conflict"
+[master 863726e] commiting master branch while merge conflict
+
+14 finally delete css-assignment branch
+$ git branch -d css-assignments
+Deleted branch css-assignments (was 924db47).

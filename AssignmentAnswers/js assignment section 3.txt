@@ -1,0 +1,61 @@
+1 create new branch js-assignment
+$ git branch js-assignment
+
+2 switch to js-assignment
+$ git checkout js-assignment
+Switched to branch 'js-assignment'
+
+3copy all the js-assignment in Assignment folder
+
+4commit javascript assignment into js-assignment
+$ ls
+READme.txt  git.js  index.html  style.css
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project/assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+5make minor changes inREADme.txt belongs to js-assignment branch
+$ git commit -m "my first commit in js-assinment"
+[master 2f9569e] my first commit in js-assinment
+ 1 file changed, 3 insertions(+)
+
+6 commit those changes
+$ git commit -m "my mistaken js-assignment commit"
+[js-assignment 2eb4518] my mistaken js-assignment commit
+ 1 file changed, 4 insertions(+)
+
+7 switch to master
+$ git checkout master
+Switched to branch 'master'
+
+8 make minor changes in READme.txt 1 line and commit those changes
+
+$ git commit -m "my first commit on behalf of js-assignment"
+On branch master
+nothing to commit, working tree clean
+
+
+9 Again switch to js-assgnments
+$ git checkout js-assignment
+Switched to branch 'js-assignment'
+
+10 & 11make minor changes into few files belongs to js-assignment
+$ git commit -m "my third  commit in js-assignment"
+[js-assignment 8046aef] my third  commit in js-assignment
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+ 
+ 12switch to master
+ 
+$ git checkout master
+Switched to branch 'master'
+
+13 merge js-assignment with master branch
+$ git commit -m "my fourth changes in js assignment"
+[master a0cc4c3] my fourth changes in js assignment
+
+14 dele$ git branch -d js-assignment
+Deleted branch js-assignment (was 8046aef).
+te js-assgnments branch
+

@@ -1,0 +1,168 @@
+1.create folder Project_dir
+$ mkdir Project_dir
+
+2 init git
+
+3 craete index .html
+touch index.html
+
+4check git status
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+index.html
+
+5 Stage index.html
+
+$ git add index.html
+
+6 commit index.html
+commit
+my first commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   index.html
+#$ git commit
+hint: Waiting for your editor to close the file...
+[master (root-commit) 82b40df] my first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ 
+ 7 make few changes in the index.html and craete 
+$ vi index.html
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ 
+$ vi info.txt
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+8 Configure git to ignore all text files
+ vi .gitignore
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git status -s
+ M index.html
+?? .gitignore
+
+
+11 commit index.html
+$ git commit -m "my second comit"
+[master 7986aaa] my second comit
+ 1 file changed, 2 insertions(+)
+
+admin@DESKTOP-MDUABLG MINGW64 /e/Project_dir (master)
+$ git status
+On branch master
+Untracked files:$ git log
+commit 7986aaa9541976caf38d744b67672e2b00ac063f (HEAD -> master)
+Author: hemanth <hemanth9774@gmail.com>
+Date:   Sat Nov 6 10:30:54 2021 +0530
+
+    my second comit
+
+commit 82b40df1e2682696e9d5eca1e04dcc9e23c07e41
+Author: hemanth <hemanth9774@gmail.com>
+Date:   Sat Nov 6 09:27:14 2021 +0530
+
+14 Revert the prevoios changes in git command
+$ git revert  7986aaa9541976caf38d744b67672e2b00ac063f
+[master fce0b80] Revert "my second comit"
+ 1 file changed, 2 deletions(-)
+ 
+
+15 Again change index.html
+ vi index.html
+ $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+    my first commit
+
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+12 log all commits so far
+git log
+
+
+
+13 make some changes in the index.html
+$vi index.html
+$git status
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+$git add index.html
+
+17 revert the changes to last stage
+
+$ git revert f02e50677269d3059b34eb97fd87c866ba4f93ef
+[master bc9c8df] come back Revert "my third commit"
+ 1 file changed, 2 deletions(-)
